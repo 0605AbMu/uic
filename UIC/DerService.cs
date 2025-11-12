@@ -37,7 +37,7 @@ public class DerService
     {
         if (data == null || data.Length == 0)
             throw new ArgumentException("Input data is null or empty", nameof(data));
-        
+
         var reader = new AsnReader(data, AsnEncodingRules.DER);
 
         if (!reader.HasData)
@@ -47,8 +47,7 @@ public class DerService
 
         var sequenceReader = reader.ReadSequence();
 
-        if (sequenceReader.TryReadInt32(out var value))
-            identity.UserId = value;
+        identity.UserId = (int)sequenceReader.ReadInteger();
 
         identity.Username = sequenceReader.ReadCharacterString(UniversalTagNumber.UTF8String);
 
@@ -56,8 +55,8 @@ public class DerService
             sequenceReader.ReadNull();
         else
             identity.Email = sequenceReader.ReadCharacterString(UniversalTagNumber.IA5String);
-        
-        identity.Permissions = new List<string>();
+
+        identity.Permissions = [];
         var permissionsSeqReader = sequenceReader.ReadSequence();
 
         while (permissionsSeqReader.HasData)
@@ -66,9 +65,8 @@ public class DerService
         }
 
         permissionsSeqReader.ThrowIfNotEmpty();
-
-        reader.ThrowIfNotEmpty();
         sequenceReader.ThrowIfNotEmpty();
+        reader.ThrowIfNotEmpty();
 
         UserIdentity.Validate(identity);
 
