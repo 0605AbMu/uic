@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIC", "UIC/UIC.csproj", "{5C55EC88-CA42-4383-92CA-C9063E5637D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIC.Test", "UIC.Test\UIC.Test.csproj", "{799CE17F-B222-44A0-A9EA-F3B337C70D38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7000E536-CBFF-45F3-9E2E-44E98762A3A4}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C55EC88-CA42-4383-92CA-C9063E5637D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C55EC88-CA42-4383-92CA-C9063E5637D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C55EC88-CA42-4383-92CA-C9063E5637D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C55EC88-CA42-4383-92CA-C9063E5637D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{799CE17F-B222-44A0-A9EA-F3B337C70D38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{799CE17F-B222-44A0-A9EA-F3B337C70D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{799CE17F-B222-44A0-A9EA-F3B337C70D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{799CE17F-B222-44A0-A9EA-F3B337C70D38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
