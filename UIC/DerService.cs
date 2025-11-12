@@ -35,6 +35,9 @@ public class DerService
 
     public static UserIdentity DecodeUserIdentity(byte[] data)
     {
+        if (data == null || data.Length == 0)
+            throw new ArgumentException("Input data is null or empty", nameof(data));
+        
         var reader = new AsnReader(data, AsnEncodingRules.DER);
 
         if (!reader.HasData)

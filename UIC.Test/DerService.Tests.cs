@@ -67,9 +67,9 @@ public class DerServiceTests
     }
 
     [Fact]
-    public void Decode_WhenBufferIsEmpty_ThrowInvalidOperationException()
+    public void Decode_WhenBufferIsEmpty_ThrowArgumentException()
     {
-        Assert.Throws<InvalidOperationException>(() => DerService.DecodeUserIdentity([]));
+        Assert.Throws<ArgumentException>(() => DerService.DecodeUserIdentity([]));
     }
 
     [Fact]
